@@ -1,0 +1,35 @@
+//Library
+#include<iostream>
+using namespace std;
+
+int NhapSo()
+{
+	cout << "Enter a Interger Number: ";
+	int A {};
+	cin >> A;
+	return A;
+}
+
+//Main Code
+int main()
+{	//Khai bao cac bien
+	int16_t X { NhapSo() };
+	int16_t Y { NhapSo() };
+
+	cout << "\n\n";
+	// Logic Higher or Lower
+	 if (X == Y)
+	{
+		cout << X << " is equal to " << Y << endl;
+	}
+	else if (X > Y)
+	{
+		cout << X << " is higher than " << Y << endl;
+	}
+	else
+	{
+		cout << X << " is lower than " << Y << endl;
+	} 
+	system("pause");
+	return 0;
+}
