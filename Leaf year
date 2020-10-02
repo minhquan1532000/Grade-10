@@ -1,0 +1,27 @@
+//Libraly
+#include <iostream>
+using namespace std;
+
+//Code
+
+int main()
+{
+	//Khai bao Bien
+	uint32_t X{};
+	
+	cout << "Nhap Nam: " << endl;
+	cin >> X;
+
+	if (X % 4 == 0)
+	{
+		cout << X << " la nam nhuan." << endl;
+	}
+	else
+	{
+		cout << X << " khong phai la nam nhuan. " << endl;
+	}
+
+	system("pause");
+	return 0;
+}
+
