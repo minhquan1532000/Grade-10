@@ -1,0 +1,33 @@
+//Libraly
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+//Code
+int main()
+{
+	//Khai bao bien ma programer cho
+	int32_t min = INT32_MAX; //Gia tri Min  cho truoc ( So lon nhat)
+	int32_t max = INT32_MIN; //Gia tri Max  cho truoc ( So be nhat)
+
+	for (int i = 1; i <= 5; i++) { // Vong lap cho user. Nhap toi da 5 lan so
+		int32_t input; // Bien cho user
+		cout << "Enter an integer value: ";
+		cin >> input;
+		Sleep(100);
+
+		//Dieu kien xet Min Max
+		//Min
+		if (input < min) //VD: 2 < 100
+			min = input; // VD: Thay bien min = 2
+
+		//Max
+		if (input > max) //VD: 9 > -100
+			max = input; //VD: Thay bien max = 9
+	}
+	cout << "----------------------------------" << endl;
+	Sleep(1000);
+	cout << "Minimum value: " << min << endl ;
+	cout << "Maximum value: " << max << endl ;
+	system("pause");
+	return 0;
+}
