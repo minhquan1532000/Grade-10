@@ -1,0 +1,126 @@
+//Libraly
+#include <iostream>
+#include <string>
+#include <Windows.h>
+using namespace std;
+
+//Nhap Ten cho nguoi dc vote
+string EnterName() {
+	string A;
+	cout << "Enter the name you want in voting: ";
+	getline(cin, A);
+	cout << "------------------------------" << endl;
+	return A;
+}
+
+int main() {
+	// Khai bao Max 5 nguoi
+	string Per1{ EnterName() };
+	string Per2{ EnterName() };
+	string Per3{ EnterName() };
+	string Per4{ EnterName() };
+	string Per5{ EnterName() };
+
+	system("cls");
+	int ABC{}; //User Nhap de chon vote cho ai
+
+	//+ Vote cho cac Per
+	int per1{}, per2{}, per3{}, per4{}, per5{};
+
+	//How many User
+	int n{};
+	cout << "How many Person voting ? ";
+	cin >> n;
+
+	system("cls");
+	
+	for (int i = 1; i <= n; i++)
+	{
+		//Description
+		cout << "----------------- Voting Time! ------------------" << endl;
+		cout << "Now there are some Person that you can vote for them" << endl;
+		cout << "Remember! Just One Vote and Enter the correct number to each people" << endl;
+		cout << "------------------------------------------------\n" << endl;
+		Sleep(500);
+
+		//Show name 
+		cout << "1. " << Per1 << "\t";
+		cout << "2. " << Per2 << "\t";
+		cout << "3. " << Per3 << "\n";
+		cout << "4. " << Per4 << "\t";
+		cout << "5. " << Per5 << endl;
+
+		//User Input
+		cout << "Enter the number you want to vote: " << endl;
+		cin >> ABC;
+		Sleep(200);
+
+		//Voting logic
+		switch (ABC)
+		{
+		case 1:
+			cout << "You vote for " << Per1 << endl;
+			++per1;
+			cout << "You have lost " << i << " Vote Pass" << endl;
+			Sleep(1000);
+			system("cls");
+			
+			break;
+
+		case 2:
+			cout << "You vote for " << Per2 << endl;
+			++per2;
+			cout << "You have lost " << i << " Vote Pass" << endl;
+			Sleep(1000);
+			system("cls");
+			break;
+
+		case 3:
+			cout << "You vote for " << Per3 << endl;
+			++per3;
+			cout << "You have lost " << i << " Vote Pass" << endl;
+			Sleep(1000);
+			system("cls");
+			break;
+		case 4:
+			cout << "You vote for " << Per4 << endl;
+			++per4;
+			cout << "You have lost " << i << " Vote Pass" << endl;
+			Sleep(1000);
+			system("cls");
+			break;
+
+		case 5:
+			cout << "You vote for " << Per5 << endl;
+			++per5;
+			cout << "You have lost " << i << " Vote Pass" << endl;
+			Sleep(1000);
+			system("cls");
+			break;
+
+		default:
+			cout << "You have type WRONG :(" << endl;
+			cout << "And you was broke down the system\n";
+			cout << "The Program Will exit now!";
+				Sleep(3000);
+				exit(10);
+				break;
+		}
+	}
+
+	//End vote
+	cout << "The voting has ended! " << endl;
+	cout << "Now is the result" << endl;
+
+	Sleep(3000);
+	cout << Per1 << " has " << per1  << endl;
+	cout << Per2 << " has " << per2  << endl;
+	cout << Per3 << " has " << per3  << endl;
+	cout << Per4 << " has " << per4  << endl;
+	cout << Per5 << " has " << per5  << endl;
+
+
+	system("pause");
+	return 0;
+
+}
