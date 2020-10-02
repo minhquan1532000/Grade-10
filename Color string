@@ -1,0 +1,11 @@
+//Libraly
+#include <iostream>
+using namespace std;
+//Code
+int main(){
+	//Go to the Intenet and search for Colour System in C++
+		system("color 3");
+		cout << "Test Color\n\n" << endl;
+	system("pause");
+	return 0;
+}
