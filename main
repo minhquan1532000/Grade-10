@@ -1,0 +1,93 @@
+//IamQuan :3
+
+//Libraly
+#include<iostream>
+#include <math.h>
+#include <Windows.h>
+using namespace std;
+//Code
+//Ham Phu de goi an cho a b c
+double GoiAn()
+{
+	double ABC{};
+	std::cin >> ABC;
+	return ABC;
+}
+//Code
+int main()
+{
+	//Khai bao cho DK
+	INT8 A{};
+	//Khai bao cho tinh toan
+	double x1, x2;
+//--------------------------------------------------
+	// User nhap a b c
+	cout << "Chuong trinh tinh phuong trinh bac 2 mot an\n";
+	cout << "Vui long nhap cac he so a , b , c\n";
+	cout << "---------------------------------------------" << endl;
+	//Nhap he so a
+	cout << "Nhap he so a: " ;
+	double a{GoiAn()};
+	Sleep(100);
+	//Dieu kien
+	while (a == 0 && A < 1000)
+	{
+		cout << "Phuong trinh da chuyen ve \nphuong trinh bac nhat mot an" << endl;
+		cout << "Ban co muon nhap lai ham so a ?\nNeu muon thi nhap lai.\na:" << endl;
+		cin >> a;
+		Sleep(100);
+		A++;
+	}
+	//Nhap he so b
+	cout << "Nhap he so b: ";
+	double b{ GoiAn() };
+	Sleep(100);
+	//Nhap he so c
+	cout << "Nhap he so c: ";
+	double c{ GoiAn() };
+	Sleep(100);
+	// Thong bao cho user
+	cout << "Dang tinh delta va nghiem ......." << endl;
+	Sleep(1000);
+	//Khai bao Delta
+	double delta{ (b * b) - 4 * a * c }; 
+	 //Tinh delta
+	if (delta < 0)
+	{
+		cout << "Delta = " << delta << "\n";
+		cout << " => Phuong trinh vo nghiem " << endl;
+	}
+	else if (delta == 0)
+	{
+		cout << "Delta = " << delta << "\n";
+		cout << " => Phuong trinh co nghiem kep " << endl;
+	}
+	else if (delta > 0)
+	{
+		cout << "Delta = " << delta << "\n";
+		cout << " => Phuong trinh co 2 nghiem phan biet " << endl;
+	}
+	cout << "\n\n";
+	Sleep(200);
+	//Tinh nghiem
+	if (delta > 0)
+	{
+		x1 = (-b - sqrt(delta)) / (2 * a);
+		x2 = (-b + sqrt(delta)) / (2 * a);
+
+		cout << "Nghiem cua phuong trinh la: \n";
+		cout << "x1 = " << x1 << endl;
+		cout << "x2 = " << x2 << endl;
+	}
+	else if (delta == 0) {
+		x1 = x2 = -b / (2 * a);
+		cout << "Nghiem cua phuong trinh la: \n";
+		cout << "x1 = x2 = " << x1 << endl;
+	}
+	else
+	{
+		cout << "Vi phuong trinh vo nghiem nen khong co nghiem" << endl;
+	}
+	system("pause");
+	return 0;
+}
