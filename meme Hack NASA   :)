@@ -1,0 +1,21 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+int main()
+{
+	int A{};
+	cout << "Peparing to Hack NASA\n" << endl;
+	Sleep(1000);
+	cout << "Start Attacking NASA.......\n" << endl;
+	Sleep(2000);
+	for (int i = 0; i < 101; i++)
+	{
+		cout << "Hacking NASA " << A ++ << " %\n\n";
+		Sleep(150);
+	}
+	Sleep(5000);
+	cout << "NASA Hacked Successfully!" << endl;
+	system("pause");
+	return 0;
+}
