@@ -1,0 +1,94 @@
+//Libraly
+#include <iostream>
+#include <Windows.h>
+#include <ctime>
+#include <cstdlib> 
+#include <cstring>
+using namespace std;
+//Code
+int main ()
+{
+// Khai bao cho user choi
+int user {};
+
+// Khai bao bien cho Computer + Random
+srand(time(NULL));
+int com = rand() % 3 + 1;
+
+//Bien Roles play
+string rock = "1. Rock\n";
+string paper = "2. Paper\n";
+string scissor = "3. Scissor\n";
+
+//---------------Rules + Description -------------------
+cout << "---------------ROCK PAPER SCISSOR--------------\n\n";
+cout << "Choose the number include the play you want.\n\n";
+cout << "Do not choose another number in your turn :3 or the game will be crash! :(" << endl;
+cout << "---------------------------------------------------------" << endl;
+Sleep(1000);
+
+// User turn
+cout << "Your turn: " << endl;
+cout << rock;
+cout << paper;
+cout << scissor;
+cin >> user;
+
+//DK cho user va hien lua chon cua user
+switch (user)
+{
+case 1:
+	cout << "You Choose  " << rock << endl;
+	break;
+case 2:
+	cout << "You Choose  " << paper << endl;
+	break; 
+case 3:
+	cout << "You Choose  " << scissor << endl;
+	break;
+
+default: //Ranh :3
+	cout << "Shhh. Did I told you not to choose another Num ? :( \n";
+	cout << "The games will be crash now ! :) " << endl;
+	Sleep(2000);
+	system("cls");
+	for (;;)
+	{
+		cout << "CRACK";
+		Sleep(1);
+	}
+	exit(10);
+}
+Sleep(1000);
+
+//Computer turn
+switch (com)
+{
+case 1:
+	cout << "Computer choose " << rock << endl;
+	break;
+case 2:
+	cout << "Computer choose " << paper << endl;
+	break;
+case 3:
+	cout << "Computer choose " << scissor << endl;
+	break;
+}
+
+//Win / Lose
+if (com == user)
+{
+	cout << "DRAW!!!! :I " << endl;
+}
+else if ((com == 1 && user == 2) || (com == 2 && user == 3) || (com == 3 && user == 1))
+{
+	cout << "You WON :o " << endl;
+}
+else if ((com == 1 && user == 3) || (com == 2 && user == 1) || (com == 3 && user == 2))
+{
+	cout << "Computer WON :3 " << endl;
+}
+
+	system("pause");
+	return 0;
+}
