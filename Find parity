@@ -1,0 +1,25 @@
+//Libraly
+#include <iostream>
+using namespace std;
+
+//Code
+int main()
+{
+	//Khai bao bien
+	int64_t a{};
+	cout << "Nhap so: ";
+	cin >> a;
+
+	//Logic chan le
+	if (a % 2 == 0)
+	{
+		cout << a << " la so chan" << endl;
+	}
+	else
+	{
+		cout << a << " la so le" << endl;
+	}
+
+	system("pause");
+	return 0;
+}
