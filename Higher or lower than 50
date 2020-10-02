@@ -1,0 +1,71 @@
+//Libraly
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include <Windows.h>
+using namespace std;
+//Code
+int main() {
+	// Khai bao bien cho user
+	int user;
+	//Khai bao bien cho so random
+	srand(time(NULL));
+	int random = rand() % (100 - 2 + 1) + 2;
+
+	// Rules game
+	cout << "----------------Rules--------------------\n\n";
+	cout << "A random number was generated from 2 to 100" << endl;
+	cout << "Guess it higher or lower than 50\n ";
+	cout << "-----------------------------------------" << endl;
+	Sleep(700);
+
+	cout << "1. Higher   " << "2. Lower  \n";
+	cout << "Choose the number " << endl;
+	cin >> user;
+	Sleep(500);
+	// Cac TH
+
+	switch (user)
+	{
+	case 1:
+		if (random >= 50)
+		{
+			cout << "You guess right!!! :o " << endl;
+			cout << "The random number is: " << random << endl;
+			cout << "( " << random << " > 50 ) " << endl;
+		}
+		else
+		{
+			cout << "You guess wrong !!! :3 " << endl;
+			cout << "The random number is: " << random << endl;
+			cout << "( " << random << " > 50 ) " << endl;
+		}
+		break;
+
+	case 2:
+		if (random < 50)
+		{
+			cout << "You guess right!!\n";
+			cout << "The random number is: " << random << endl;
+			cout << "( " << random << " < 50 ) " << endl;
+		}
+		else
+		{
+			cout << "You guess wrong !!\n";
+			cout << "The random number is: " << random << endl;
+			cout << "( " << random << " < 50 ) " << endl;
+		}
+		break;
+
+	default:
+		system("cls");
+        cout << "You choose the wrong number!" << endl;
+		cout << "Read the rules carefully!" << endl;
+		cout << "This will be exit now :3 ";
+		Sleep(1500);
+		exit(10);
+		break;
+	}
+	system("pause");
+	return 0;
+}
