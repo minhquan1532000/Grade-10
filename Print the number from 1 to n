@@ -1,0 +1,21 @@
+//Libraly
+#include <iostream>
+#include <cstdint>
+using namespace std;
+
+//Code
+int main()
+{
+	uint64_t A{};
+	cout << "Enter a number: ";
+	cin >> A;
+
+	for (uint64_t i = 1; i <= A; i++)
+	{
+		cout << i << "  ";
+
+	}
+	cout << "!" << endl;
+	system("pause");
+	return 0;
+}
