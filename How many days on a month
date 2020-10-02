@@ -1,0 +1,38 @@
+//Libraly
+#include <iostream>
+using namespace std;
+//Code
+int main() {
+	// Khai bao bien cho user
+	int user{};
+	// Khai bao Dk cho user
+	int a{};
+	//Gioi thieu
+	cout << "How many Days on a month Program." << endl;
+	cout << "---------------------------" << endl;
+	cout << "Enter a month: ";
+	cin >> user;
+	//DK cho user
+	while (user < 0 || user > 12 && a < 1000)
+	{
+		a++;
+		cout << "Nhap bua la khong tot :'(\n";
+		cout << "Nhap lai di !!\n";
+		cin >> user;
+	}
+	//Xet TH
+	if (user == 1 || user == 3 || user == 5 || user == 7 || user == 8 || user == 10 || user == 12)
+	{
+		cout << "Thang do co 31 ngay :3" << endl;
+	}
+	else if (user == 4 || user == 6 || user == 9 || user == 11)
+	{
+		cout << "Thang do co 30 ngay :3" << endl;
+	}
+	else if (user == 2)
+	{
+		cout << "Thang do co 28 ngay (Khong nhuan) va 29 ngay (Nhuan)" << endl;
+	}
+	system("pause");
+	return 0;
+}
